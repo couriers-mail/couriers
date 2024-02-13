@@ -4,6 +4,8 @@ version = "0.0.0"
 edition = "2021"
 authors = ["Esteban Borai <estebanborai@gmail.com>"]
 publish = true
+description = "SMTP Server with Web UI for Email solutions development"
+license = "MIT"
 
 [[bin]]
 name = "couriers"
