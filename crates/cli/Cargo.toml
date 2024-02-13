@@ -1,0 +1,19 @@
+[package]
+name = "couriers-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["Esteban Borai <estebanborai@gmail.com>"]
+publish = false
+
+[[bin]]
+name = "cli"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5.0", features = ["std", "derive", "env"] }
+
+# Workspace
+anyhow = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }

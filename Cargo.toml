@@ -1,0 +1,27 @@
+[workspace]
+default-members = ["crates/cli"]
+resolver = "1"
+members = [
+  "crates/cli"
+]
+
+[workspace.package]
+name = "couriers"
+authors = ["Esteban Borai <estebanborai@gmail.com>"]
+homepage= "https://github.com/couriers-mail/couriers"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+readme = "README.md"
+keywords = ["dev", "debug", "smtp", "mail", "wasm", "web"]
+
+[workspace.dependencies]
+anyhow = "1.0.79"
+tokio = "1.36.0"
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+
+[profile.release]
+opt-level = 'z'
+lto = true
+strip = true
