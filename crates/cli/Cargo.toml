@@ -1,12 +1,12 @@
 [package]
-name = "couriers-cli"
+name = "couriers"
 version = "0.1.0"
 edition = "2021"
 authors = ["Esteban Borai <estebanborai@gmail.com>"]
 publish = false
 
 [[bin]]
-name = "cli"
+name = "couriers"
 path = "src/main.rs"
 
 [dependencies]

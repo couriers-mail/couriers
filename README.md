@@ -1,2 +1,2 @@
 # couriers
-📫 An SMTP Server with Web UI for email debugging
+📨 SMTP Server with Web UI for Email solutions development

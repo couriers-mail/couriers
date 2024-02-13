@@ -16,6 +16,9 @@ pub struct ServeOpt {
 
 impl ServeOpt {
     pub async fn exec(&self) -> Result<()> {
+        println!("Thanks for using Couriers! 🚀");
+        println!("Starting server at http://{}:{}", self.host, self.port);
+
         Ok(())
     }
 }
