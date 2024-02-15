@@ -3,6 +3,8 @@ use std::net::IpAddr;
 use anyhow::Result;
 use clap::Args;
 
+use couriers::Couriers;
+
 const HOST_ENV_VAR: &str = "HOST";
 const PORT_ENV_VAR: &str = "PORT";
 
@@ -18,6 +20,7 @@ impl ServeOpt {
     pub async fn exec(&self) -> Result<()> {
         println!("Thanks for using Couriers! 🚀");
         println!("Starting server at http://{}:{}", self.host, self.port);
+        println!("{:?}", Couriers { field: 32 });
 
         Ok(())
     }
