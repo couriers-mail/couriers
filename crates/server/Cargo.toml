@@ -1,5 +1,5 @@
 [package]
-name = "cli"
+name = "server"
 version = "0.0.0"
 edition = "2021"
 authors = ["Esteban Borai <estebanborai@gmail.com>"]
@@ -7,19 +7,12 @@ publish = false
 description = "SMTP Server with Web UI for Email solutions development"
 license = "MIT"
 
-[[bin]]
-name = "couriers"
-path = "src/main.rs"
-
 [dependencies]
-clap = { version = "4.5.0", features = ["std", "derive", "env"] }
-
-# Workspace
 anyhow = { workspace = true }
-tokio = { workspace = true, features = ["full"] }
+axum = { workspace = true }
+tokio = { workspace = true }
+tower-http = { workspace = true, features = ["cors", "trace"] }
 tracing = { workspace = true }
-tracing-subscriber = { workspace = true }
 
 # Local
 couriers = { path = "../client" }
-server = { path = "../server" }
